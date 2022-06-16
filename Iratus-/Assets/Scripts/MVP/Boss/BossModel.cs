@@ -1,5 +1,6 @@
 public class BossModel : IDamageable
 {
+    private readonly int _bossDamageMultiplier=5;
     private readonly int _armor;
     private HeroModel _hero;
 
@@ -13,7 +14,7 @@ public class BossModel : IDamageable
 
     public void DoDamage(int damageFactor)
     {
-        _hero.DoDamage(5);
+        _hero.DoDamage(_bossDamageMultiplier);
     }
 
     public void TakeDamage(int damage)

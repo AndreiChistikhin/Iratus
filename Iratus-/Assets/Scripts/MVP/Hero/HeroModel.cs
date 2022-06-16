@@ -4,7 +4,7 @@ public class HeroModel : IDamageable
 {
     private readonly int _maxHealth=100;
     private readonly int _minDamage = 5;
-    private readonly int maxDamage = 15;
+    private readonly int _maxDamage = 15;
 
     private int _currentHealth = 100;
 
@@ -15,7 +15,7 @@ public class HeroModel : IDamageable
     public void DoDamage(int damageFactor)
     {
         Random random = new Random();
-        int randomDamage = random.Next(_minDamage, maxDamage* damageFactor);
+        int randomDamage = random.Next(_minDamage, _maxDamage* damageFactor);
         DamageDone?.Invoke(randomDamage);
     }
 
